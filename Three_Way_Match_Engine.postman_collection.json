@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "c1f7596f-dc39-4467-88fa-05a96f1b1c34",
+		"name": "Three-Way Match Engine",
+		"description": "API collection for the Three-Way Match Engine (PO, GRN, Invoice matching).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Upload PO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "Upload the Purchase Order Image/PDF",
+							"type": "file"
+						},
+						{
+							"key": "documentType",
+							"value": "po",
+							"description": "Must be 'po'",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/documents/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"documents",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Upload GRN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "Upload the Goods Receipt Note Image/PDF",
+							"type": "file"
+						},
+						{
+							"key": "documentType",
+							"value": "grn",
+							"description": "Must be 'grn'",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/documents/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"documents",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Upload Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "Upload the Invoice Image/PDF",
+							"type": "file"
+						},
+						{
+							"key": "documentType",
+							"value": "invoice",
+							"description": "Must be 'invoice'",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/documents/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"documents",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Get Match Results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/match/PO-2024-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"match",
+						"PO-2024-001"
+					]
+				},
+				"description": "Change the PO Number in the URL to match the PO you uploaded."
+			},
+			"response": []
+		}
+	]
+}
