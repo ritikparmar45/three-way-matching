@@ -68,6 +68,10 @@ The API is documented using Swagger. Once the server is running, visit:
 - **GET `/api/match/:poNumber`**: Retrieve the matching results and details for a specific PO.
 - **GET `/api/documents/:id?type=po`**: Retrieve details of a specific parsed document.
 
+## 🧪 Testing with Postman
+A pre-configured Postman collection is included in this repository. 
+Please import the `Three_Way_Match_Engine.postman_collection.json` file into your Postman workspace to easily test the APIs.
+
 ## 🧠 Matching Logic & Rules
 The engine performs validation at the **item level (SKU)**.
 
